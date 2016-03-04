@@ -1,0 +1,289 @@
+/*
+Project Name: SEA Travels
+Author: Justin Martin
+Developer from GA SEA
+*/
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.alignright {
+  float: right;
+  padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+  float: left;
+  padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES /*1280 x 800*/
+/*******************************************/
+
+body{
+  margin: 0;
+  padding-top: 600px;
+}        
+
+/******************************************
+/* HEADER
+/*******************************************/
+
+header{
+  text-align: center;
+  height: 650px;
+  padding-top: 50px;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1{
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 160px;
+  color: white;
+}
+
+.home-header h2{
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 40px;
+  color: white;
+  margin-bottom: 100px;
+}
+
+nav li{
+  display: inline;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+nav li a{
+  text-decoration: none;
+  color: white;
+  font-family: 'Shadows Into Light Two', cursive;
+}
+
+/*Sticky Nav*/
+.main-nav, .main {
+  position: relative; 
+}
+.main-nav {
+  background: rgba(0,0,0,0.8);
+  height: 40px;
+  z-index: 150;
+  padding-top: 10px;
+  margin-bottom: -50px;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+header, .main-nav-scrolled {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+.main {
+  background: white;
+  padding: 80px 0px 50px;
+  column-count: 2;
+  column-gap: 40px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+/******************************************
+/* COVER PHOTOS
+/*******************************************/
+
+.thailand{
+  background-image: url(../images/thailand.jpg);
+}
+
+.vietnam{
+  background-image: url(../images/vietnam.jpg);
+}
+
+.cambodia{
+  background-image: url(../images/cambodia.jpg);
+}
+
+.malaysia{
+  background-image: url(../images/malaysia.jpg);
+}
+
+.singapore{
+  background-image: url(../images/singapore.jpg);
+}
+
+.indonesia{
+  background-image: url(../images/indonesia.jpg);
+}
+
+.mexico{
+  background-image: url(../images/mexico.jpg);
+}
+
+.philippines{
+  background-image: url(../images/philippines.jpg);
+}
+
+.hawaii{
+  background-image: url(http://gdurl.com/gQCN);
+}
+
+/******************************************
+/* SUMMARY TEXT
+/*******************************************/
+
+.summary h2{
+  font-size: 40px;
+  color:black;
+  font-family: 'Shadows Into Light Two', cursive;
+}
+
+.summary p{
+  font-family: 'Shadows Into Light Two', cursive;
+  text-align:justify;
+  padding-left: 15%; 
+  padding-right: 15%;
+}
+
+h3{
+  font-size: 26px;
+  color:black;
+  font-family: 'Shadows Into Light Two', cursive;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+/******************************************
+/* BODY - PHOTO GRID
+/*******************************************/
+
+ul.grid {
+  list-style: none;
+  font-size: 0px;
+  margin-left: -0.75%; /* should match li left margin */
+}
+ul.grid li {
+  display: inline-block;
+  margin: 0 0 -0.25% 0.75%;
+  background: #fff;
+  font-size: 16px;
+  font-size: 1rem;
+  vertical-align: top;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+ul.grid li img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 5px #ddd;
+}
+
+ul.grid.columns-2 li {
+  width: 47.5%; /* this value + 2.5 should = 50% */
+}
+
+/******************************************
+/* BODY - PHOTO GRID CAPTIONS
+/*******************************************/
+
+.photo-grid figure {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.photo-grid figcaption {
+  background: rgba(0,0,0,0.4);
+  color: white;
+  height: relative;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  transition: all 300ms;
+  -webkit-transition-delay: 100ms;
+  -moz-transition-delay: 100ms;
+  transition-delay: 100ms;
+}
+
+.photo-grid figcaption p {
+  position: relative;
+  top: -40px;
+  width: 100%;
+  vertical-align: middle;
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  font-family: 'Shadows Into Light Two', cursive;
+  padding-top: 10px;
+}
+
+.photo-grid figure:hover figcaption {
+  opacity: 1;
+}
+
+.photo-grid figure:hover figcaption p {
+  -moz-transform: translateY(40px);
+  -webkit-transform: translateY(40px);
+  transform: translateY(40px);
+}
+
+/******************************************
+/* FOOTER
+/*******************************************/
+
+
+
+/******************************************
+/* MEDIA QUERY
+/*******************************************/
+@media (max-width: 480px) {
+  ul.grid-nav li {
+    display: block;
+    margin: 0 0 5px;
+  }
+  ul.grid-nav li a {
+    display: block;
+  }
+  ul.grid {
+    margin-left: 0;
+  }
+  ul.grid li {
+    width: 100% !important; /* over-ride all li styles */
+    margin: 0 0 20px;
+  }
+}

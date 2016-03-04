@@ -1,0 +1,341 @@
+/*
+Project Name: SEA Travels
+Author: Justin Martin
+Developer from GA SEA
+*/
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.alignright {
+  float: right;
+  padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+  float: left;
+  padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES /*1280 x 800*/
+/*******************************************/
+
+body{
+  margin: 0;
+  padding-top: 600px;
+}        
+
+/******************************************
+/* HEADER
+/*******************************************/
+
+header{
+  text-align: center;
+  height: 650px;
+  padding-top: 50px;
+  background-image: url(../images/isla-mujeres.jpg);
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1{
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 100px;
+  color: white;
+}
+
+nav li{
+  display: inline;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+nav li a{
+  text-decoration: none;
+  color: white;
+  font-family: 'Shadows Into Light Two', cursive;
+}
+
+/*Sticky Nav*/
+.main-nav, .main {
+  position: relative; 
+}
+.main-nav {
+  background: rgba(0,0,0,0.7);
+  height: 40px;
+  z-index: 150;
+  padding-top: 10px;
+  margin-bottom: -50px;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+header, .main-nav-scrolled {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+.main {
+  background: white;
+  padding: 110px 50px 50px;
+  column-count: 2;
+  column-gap: 40px;
+}
+
+
+/******************************************
+/* HAMBURGER
+/*******************************************/
+
+#home-header .hamburger{
+  display: none;
+}
+
+/******************************************
+/* BODY
+/*******************************************/
+
+.main{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.main div{
+  display: inline-block;
+  height: 350px;
+  width: 550px;
+}
+
+.box{
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 15px;
+}
+
+.thailand{
+  background-image: url(../images/thailand.jpg);
+}
+
+.vietnam{
+  background-image: url(../images/vietnam.jpg);
+}
+
+.cambodia{
+  background-image: url(../images/cambodia.jpg);
+}
+
+.malaysia{
+  background-image: url(../images/malaysia.jpg);
+}
+
+.singapore{
+  background-image: url(../images/singapore.jpg);
+}
+
+.indonesia{
+  background-image: url(../images/indonesia.jpg);
+}
+
+.mexico{
+  background-image: url(../images/mexico.jpg);
+}
+
+.philippines{
+  background-image: url(../images/philippines.jpg);
+}
+
+.hawaii{
+  background-image: url(http://gdurl.com/gQCN);
+}
+
+/******************************************
+/* BODY - DIV(IMAGE) HOVER
+/*******************************************/
+.photo-grid figure {
+  height: 350px;
+  width: 550px;
+  overflow: hidden;
+  position: relative;
+}
+
+.photo-grid figcaption {
+  background: rgba(0,128,128,0.2);
+  color: white;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  transition: all 300ms;
+  -webkit-transition-delay: 100ms;
+  -moz-transition-delay: 100ms;
+  transition-delay: 100ms;
+}
+
+.photo-grid figcaption p {
+  font-size: 3.0em;
+  position: relative;
+  top: -40px;
+  width: 550px;
+  vertical-align: middle;
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  padding-top: 150px;
+  font-family: 'Shadows Into Light Two', cursive;
+}
+
+.photo-grid figure:hover figcaption {
+  opacity: 1;
+}
+
+.photo-grid figure:hover figcaption p {
+  -moz-transform: translateY(40px);
+  -webkit-transform: translateY(40px);
+  transform: translateY(40px);
+}
+
+/******************************************
+/* BODY - TITLE STAGNANT
+/*******************************************/
+
+.title p{
+  margin-top: 150px;
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 3.0em;
+  color: white;
+  background-color: rgba(0,0,0,0.2);
+  width: 40%;
+  margin-left: 170px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 2px solid white;
+}
+
+/******************************************
+/* HOVER EFFECT STYLE CLASSES
+/*******************************************/
+
+/* Underline From Center */
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: rgb(255, 255, 255);
+  height: 2px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
+
+
+/******************************************
+/* FOOTER
+/*******************************************/
+
+
+
+/******************************************
+/* MEDIA QUERY
+/*******************************************/
+@media (max-width: 700px){
+
+/* Hamburger */
+  .line{
+    width: 2.5em;
+    height: .2em;
+    background: white;
+    border-radius: 1em;
+    margin-top: .25em;
+  }
+  
+  .line:first-of-type{
+    margin-top:.1em;
+  }
+
+  ul li{
+    height: 0px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.5s;
+    }
+
+  #home-header nav {
+    padding: 0;
+    float: none;
+  }
+
+  #main-nav li {
+    margin-left: 0px;
+  } 
+
+  #home-header .hamburger{
+    display:block;
+    position: absolute;
+    top:.25em;
+    right:1em;
+    cursor: pointer;
+  }
+
+  .nav-height li{
+    display: block;
+    height: 50px;
+    background-color: rgba(0,0,0,0.7);
+    text-align: center;
+  }
+
+}
