@@ -100,13 +100,15 @@ header, .main-nav-scrolled {
   width: 100%;
   top: 0;
 }
+
 .main {
   background: white;
   padding: 110px 50px 50px;
   column-count: 2;
   column-gap: 40px;
+  margin-top: 50px;
+  text-align: center;
 }
-
 
 /******************************************
 /* HAMBURGER
@@ -117,62 +119,36 @@ header, .main-nav-scrolled {
 }
 
 /******************************************
-/* BODY
+/* BODY - PHOTO GRID
 /*******************************************/
 
-.main{
-  margin-top: 50px;
-  text-align: center;
+ul.grid {
+  list-style: none;
+  font-size: 0px;
+  margin-left: -2.0%; /* should match li left margin */
 }
-
-.main div{
+ul.grid li {
   display: inline-block;
-  height: 350px;
-  width: 550px;
+  margin: 0 0 1.0% 2.0%;
+  padding-bottom: 0px;
+  background: #fff;
+  font-size: 16px;
+  font-size: 1rem;
+  vertical-align: top;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+ul.grid li img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 5px #ddd;
 }
 
-.box{
-  overflow: hidden;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 15px;
-}
-
-.thailand{
-  background-image: url(../images/thailand.jpg);
-}
-
-.vietnam{
-  background-image: url(../images/vietnam.jpg);
-}
-
-.cambodia{
-  background-image: url(../images/cambodia.jpg);
-}
-
-.malaysia{
-  background-image: url(../images/malaysia.jpg);
-}
-
-.singapore{
-  background-image: url(../images/singapore.jpg);
-}
-
-.indonesia{
-  background-image: url(../images/indonesia.jpg);
-}
-
-.mexico{
-  background-image: url(../images/mexico.jpg);
-}
-
-.philippines{
-  background-image: url(../images/philippines.jpg);
-}
-
-.hawaii{
-  background-image: url(http://gdurl.com/gQCN);
+ul.grid.columns-2 li {
+  width: 47.5%; /* this value + 2.5 should = 50% */
 }
 
 /******************************************
@@ -180,8 +156,7 @@ header, .main-nav-scrolled {
 /*******************************************/
 
 .photo-grid figure {
-  height: 350px;
-  width: 550px;
+  width: 100%;
   overflow: hidden;
   position: relative;
 }
@@ -189,7 +164,7 @@ header, .main-nav-scrolled {
 .photo-grid figcaption {
   background: rgba(0,128,128,0.2);
   color: white;
-  height: 100%;
+  height: 96.75%;
   left: 0;
   opacity: 0;
   position: absolute;
@@ -207,13 +182,13 @@ header, .main-nav-scrolled {
 .photo-grid figcaption p {
   font-size: 3.0em;
   position: relative;
-  top: -40px;
-  width: 550px;
+  top: -50px;
+  width: 100%;
   vertical-align: middle;
   -webkit-transition: all 300ms ease-out;
   -moz-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
-  padding-top: 150px;
+  padding-top: 30%;
   font-family: 'Shadows Into Light Two', cursive;
 }
 
@@ -226,7 +201,6 @@ header, .main-nav-scrolled {
   -webkit-transform: translateY(40px);
   transform: translateY(40px);
 }
-
 
 /******************************************
 /* HOVER EFFECT STYLE CLASSES
@@ -277,10 +251,34 @@ header, .main-nav-scrolled {
 /* MEDIA QUERY
 /*******************************************/
 
-/* BODY - TITLE STAGNANT */
+@media (max-width: 700px) {
 
-@media (max-width: 700px){
+  /* Set Grid to 1 column */
+  ul.grid-nav li {
+    display: block;
+    margin: 0 0 5px;
+  }
+  ul.grid-nav li a {
+    display: block;
+  }
+  ul.grid {
+    margin-left: 0;
+  }
+  ul.grid li {
+    width: 100% !important; /* over-ride all li styles */
+    margin: 0 0 20px;
+  }
 
+  /* adjust header photo and nav bar height */
+  #home-header{
+    height: 500px;
+  }
+
+  body{
+    padding-top: 500px;
+  }
+
+  /* BODY - TITLE STAGNANT */
   .photo-grid figcaption {
     background: rgba(0,0,0,0.0);
     opacity: 1;
@@ -288,7 +286,7 @@ header, .main-nav-scrolled {
 
   .photo-grid figcaption p {
     position: relative;
-    width: 550px;
+    width: 100%;
     vertical-align: middle;
     -webkit-transition: all 300ms ease-out;
     -moz-transition: all 300ms ease-out;
@@ -307,7 +305,7 @@ header, .main-nav-scrolled {
   }
 
   .title p{
-    margin-top: 175px;
+    margin-top: 35%;
     font-family: 'Shadows Into Light Two', cursive;
     font-size: 3.0em;
     color: white;
@@ -316,16 +314,19 @@ header, .main-nav-scrolled {
     border: 2px solid white;
   }
 
+}
+
+@media (max-width: 500px) {
+
+  /* adjust header photo and nav bar height */
   #home-header{
-    height: 500px;
+    height: 350px;
   }
 
   body{
-    padding-top: 500px;
+    padding-top: 350px;
   }
-  .main div{
-    display: block;
-  }
+
 }
 
 /*
@@ -376,6 +377,3 @@ header, .main-nav-scrolled {
     text-align: center;
   }
 */
-
-
-}
