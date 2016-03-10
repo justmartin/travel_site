@@ -271,7 +271,7 @@ ul.grid.columns-2 li {
 /******************************************
 /* MEDIA QUERY
 /*******************************************/
-@media (max-width: 480px) {
+@media (max-width: 700px) {
   ul.grid-nav li {
     display: block;
     margin: 0 0 5px;
@@ -285,5 +285,44 @@ ul.grid.columns-2 li {
   ul.grid li {
     width: 100% !important; /* over-ride all li styles */
     margin: 0 0 20px;
+  }
+
+  .home-header{
+    height: 500px;
+  }
+
+  body{
+    padding-top: 500px;
+  }
+
+  .home-header h2{
+    font-size: 2.25em;
+  }
+
+  h1{
+    font-size: 7em;
+  }
+
+  .summary p{
+    padding-left: 5%; 
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 500px) {
+  .home-header{
+    height: 350px;
+  }
+
+  body{
+    padding-top: 350px;
+  }
+
+  .home-header h2{
+    margin-bottom: 50px;
+  }
+
+  h1{
+    font-size: 5em;
   }
 }
