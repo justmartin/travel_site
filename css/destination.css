@@ -172,39 +172,46 @@ h3{
 /******************************************
 /* BODY - PHOTO GRID
 /*******************************************/
-
-ul.grid {
+ul.rig {
   list-style: none;
   font-size: 0px;
-  margin-left: -0.75%; /* should match li left margin */
+  margin-left: -0.5%; /* should match li left margin */
 }
-ul.grid li {
+ul.rig li {
   display: inline-block;
-  margin: 0 0 -0.25% 0.75%;
+  padding: 0px;
+  margin: 0 0 0.5% 0.5%;
   background: #fff;
+  border: 1px solid #ddd;
   font-size: 16px;
   font-size: 1rem;
   vertical-align: top;
+  box-shadow: 0 0 5px #ddd;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
-ul.grid li img {
+ul.rig li img {
   max-width: 100%;
   height: auto;
   margin: 0 0 10px;
-  border: 1px solid #ddd;
-  box-shadow: 0 0 5px #ddd;
 }
 
-ul.grid.columns-2 li {
-  width: 47.5%; /* this value + 2.5 should = 50% */
+ul.rig li p {
+  font-size: .9em;
+  line-height: 1.5em;
+  color: #999;
+}
+
+/* class for 2 columns */
+ul.rig.columns-2 li {
+  width: 49.5%; /* this value + 2.5 should = 50% */
 }
 
 /******************************************
 /* BODY - PHOTO GRID CAPTIONS
 /*******************************************/
-
+/*
 .photo-grid figure {
   width: 100%;
   overflow: hidden;
@@ -250,7 +257,7 @@ ul.grid.columns-2 li {
   -webkit-transform: translateY(40px);
   transform: translateY(40px);
 }
-
+*/
 /******************************************
 /* FOOTER
 /*******************************************/
@@ -268,10 +275,10 @@ ul.grid.columns-2 li {
   ul.grid-nav li a {
     display: block;
   }
-  ul.grid {
+  ul.rig {
     margin-left: 0;
   }
-  ul.grid li {
+  ul.rig li {
     width: 100% !important; /* over-ride all li styles */
     margin: 0 0 20px;
   }
