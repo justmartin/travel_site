@@ -147,7 +147,7 @@ header, .main-nav-scrolled {
 /******************************************
 /* SUMMARY TEXT
 /*******************************************/
-
+/*
 .summary h2{
   font-size: 40px;
   color:black;
@@ -168,7 +168,7 @@ h3{
   padding-top: 50px;
   padding-bottom: 20px;
 }
-
+*/
 /******************************************
 /* BODY - PHOTO GRID
 /*******************************************/
@@ -304,6 +304,7 @@ ul.rig.columns-2 li {
 /******************************************
 /* MEDIA QUERY
 /*******************************************/
+/*
 @media (max-width: 700px) {
   ul.grid-nav li {
     display: block;
@@ -316,7 +317,7 @@ ul.rig.columns-2 li {
     margin-left: 0;
   }
   ul.rig li {
-    width: 100% !important; /* over-ride all li styles */
+    width: 100% !important; /* over-ride all li styles 
     margin: 0 0 20px;
   }
 
@@ -357,5 +358,22 @@ ul.rig.columns-2 li {
 
   h1{
     font-size: 5em;
+  }
+}
+*/
+@media (max-width: 480px) {
+  ul.grid-nav li {
+    display: block;
+    margin: 0 0 5px;
+  }
+  ul.grid-nav li a {
+    display: block;
+  }
+  ul.rig {
+    margin-left: 0;
+  }
+  ul.rig li {
+    width: 100% !important; /* over-ride all li styles */
+    margin: 0 0 20px;
   }
 }
