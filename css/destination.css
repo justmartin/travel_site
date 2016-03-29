@@ -110,6 +110,7 @@ header, .main-nav-scrolled {
 .main {
   background: white;
   margin-top: 50px;
+  text-align: center;
 }
 
 /******************************************
@@ -156,6 +157,7 @@ header, .main-nav-scrolled {
   text-align:justify;
   padding-left: 15%; 
   padding-right: 15%;
+  padding-top: 60px;
 }
 
 h3{
@@ -192,13 +194,14 @@ ul.rig li {
 ul.rig li img {
   max-width: 100%;
   height: auto;
-  margin: 0 0 10px;
+  margin: 0 0 1px;
 }
 
 ul.rig li p {
   font-size: .9em;
   line-height: 1.5em;
   color: #999;
+  font-family: 'Shadows Into Light Two', cursive;
 }
 
 /* class for 2 columns */
