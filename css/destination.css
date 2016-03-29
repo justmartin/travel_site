@@ -106,6 +106,7 @@ header, .main-nav-scrolled {
   width: 100%;
   top: 0;
 }
+
 .main {
   background: white;
   padding: 80px 0px 50px;
@@ -147,7 +148,7 @@ header, .main-nav-scrolled {
 /******************************************
 /* SUMMARY TEXT
 /*******************************************/
-/*
+
 .summary h2{
   font-size: 40px;
   color:black;
@@ -168,7 +169,7 @@ h3{
   padding-top: 50px;
   padding-bottom: 20px;
 }
-*/
+
 /******************************************
 /* BODY - PHOTO GRID
 /*******************************************/
